@@ -1,125 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing Plan</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    
-    <link rel="stylesheet" href="/styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plan</title>
+  <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <!-- Contenitore principale -->
-    <main class="pricing-section">
-        <div class="top-bar">
-            <!-- Heading -->
-            <div class="heading">
-                <h1>Our Pricing Plan</h1>
-                <p>We are an industry-leading company that values honesty, integrity and
-                    efficiency, building quality products.
-                </p>
-            </div>
+
+  <main class="pricing">
+    <section class="pricing-header">
+      <div class="title-box">
+        <h1>Our Pricing Plan</h1>
+        <p>
+          We are an industry-leading company that values honesty, integrity and
+          efficiency, building quality products.
+        </p>
+      </div>
+
+      <div class="billing">
+        <span>Monthly</span>
+        <div class="switch active"></div>
+        <span>Yearly</span>
+        <div class="switch"></div>
+      </div>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h2>Basic</h2>
+        <p class="subtitle">Most Popular</p>
+
+        <div class="price-box">
+          <span class="currency">$</span>
+          <span class="price">2.45</span>
+          <span class="period">/mo</span>
         </div>
 
-        <!-- Toggle per il tipo di abbonamento -->
-        <div class="type-subscription-toggle">
-            <span>Monthly</span>
-            <div class="toggle-switch"></div>
-
-            <span>Yearly</span>
-            <div class="toggle-switch-off"></div>
+        <div class="discount-row">
+          <span>Yearly</span>
+          <span class="badge">15% Off</span>
         </div>
 
-        <!-- Contenitore delle card dei piani -->
-         <div class="plans">
-            
-            <!-- Struttura della card del piano -->
-            <article class="plan-card">
-                <h2>Basic</h2>
-                <p class="plan-subtitle">Most Popular</p>
-                
+        <a href="#" class="btn">Choose plan</a>
 
-                <div class="price">
-                    <span class="currency">$</span>
-                    <span class="amount">2.45</span>
-                    <span class="period">/mo</span>
-                </div>
+        <ul class="features">
+          <li>Unlimited Products</li>
+          <li>Custom Permissions</li>
+          <li>Custom Infrastructure</li>
+          <li class="not-included">Custom Design &amp; features</li>
+          <li class="not-included">Unlimited updates</li>
+          <li class="not-included">Unlimited Infrastructure</li>
+        </ul>
+      </article>
 
-                <div class="discount">
-                    <span>Yearly</span>
-                    <span class="badge">15% Off</span>
-                </div>
+      <article class="card featured">
+        <h2>Professional</h2>
+        <p class="subtitle">Recommended</p>
 
-                <a href="#" class="plan-btn">Choose Plan</a>
+        <div class="price-box">
+          <span class="currency">$</span>
+          <span class="price">4.45</span>
+          <span class="period">/mo</span>
+        </div>
 
-                <ul class="features">
-                    <li>Unlimited Products</li>
-                    <li>Custom Permissions</li>
-                    <li>Custom Infrastructure</li>
-                    <li class="not-included">Custom Design &amp; features</li>
-                    <li class="not-included">Unlimited updates</li>
-                    <li class="not-included">Unlimited Infrastructure</li>
-                </ul>
+        <div class="discount-row">
+          <span>Yearly</span>
+          <span class="badge">15% Off</span>
+        </div>
 
-            </article>
+        <a href="#" class="btn btn-light">Choose plan</a>
 
-            <article class="plan-card featured">
-                <h2>Professional</h2>
-                <p class="plan-subtitle">Recommended</p>
+        <ul class="features">
+          <li>Unlimited Products</li>
+          <li>Custom Permissions</li>
+          <li>Custom Infrastructure</li>
+          <li>Custom Design &amp; features</li>
+          <li class="not-included">Unlimited updates</li>
+          <li class="not-included">Unlimited Infrastructure</li>
+        </ul>
+      </article>
 
-                <div class="price">
-                    <span class="currency">$</span>
-                    <span class="amount">4.45</span>
-                    <span class="period">/mo</span>
-                </div>
+      <article class="card wide-tablet">
+        <h2>Ultimate</h2>
+        <p class="subtitle">Best value</p>
 
-                <div class="discount">
-                    <span>Yearly</span>
-                    <span class="badge">15% Off</span>
-                </div>
+        <div class="price-box">
+          <span class="currency">$</span>
+          <span class="price">12.45</span>
+          <span class="period">/mo</span>
+        </div>
 
-                <a href="#" class="plan-btn light-btn">Choose plan</a>
+        <div class="discount-row">
+          <span>Yearly</span>
+          <span class="badge">15% Off</span>
+        </div>
 
-                <ul class="features">
-                    <li>Unlimited Products</li>
-                    <li>Custom Permissions</li>
-                    <li>Custom Infrastructure</li>
-                    <li>Custom Design &amp; features</li>
-                    <li class="not-included">Unlimited updates</li>
-                    <li class="not-included">Unlimited Infrastructure</li>
-                </ul>
-                </article>
+        <a href="#" class="btn">Choose plan</a>
 
-                <article class="plan-card full-width-on-tablet">
-                <h2>Ultimate</h2>
-                <p class="plan-subtitle">Best value</p>
-
-                <div class="price">
-                    <span class="currency">$</span>
-                    <span class="amount">12.45</span>
-                    <span class="period">/mo</span>
-                </div>
-
-                <div class="discount">
-                    <span>Yearly</span>
-                    <span class="badge">15% Off</span>
-                </div>
-
-                <a href="#" class="plan-btn">Choose plan</a>
-
-                <ul class="features">
-                    <li>Unlimited Products</li>
-                    <li>Custom Permissions</li>
-                    <li>Custom Infrastructure</li>
-                    <li>Custom Design &amp; features</li>
-                    <li>Unlimited updates</li>
-                    <li>Unlimited Infrastructure</li>
-                </ul>
-            </article>
-
-         </div>
-    </main>
+        <ul class="features">
+          <li>Unlimited Products</li>
+          <li>Custom Permissions</li>
+          <li>Custom Infrastructure</li>
+          <li>Custom Design &amp; features</li>
+          <li>Unlimited updates</li>
+          <li>Unlimited Infrastructure</li>
+        </ul>
+      </article>
+    </section>
+  </main>
 
 </body>
 </html>
