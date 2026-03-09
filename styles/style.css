@@ -9,5 +9,34 @@ body {
     font-family: sans-serif;
     background-color: #f4f4f4;
     color: #111;
-    padding: 20px;
+    
+}
+
+/* Contenitore principale*/
+.pricing-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 20px 50px;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Heading */
+.heading h1 {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.heading p {
+    max-width: 700px;
+    font-size: 1.1rem;
+    color: #777;
 }
