@@ -170,25 +170,28 @@ a {
 }
 
 .features {
-  list-style: none;
+list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .features li {
-  position: relative;
-  padding-left: 44px;
-  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 22px;
   font-size: 1rem;
-  line-height: 1.2;
 }
 
 .features li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: -4px;
-  font-size: 2rem;
+    content: "✓";
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+  font-size: 1.8rem;
   line-height: 1;
-  font-weight: 400;
+  flex-shrink: 0;
 }
 
 .features li.not-included::before {
