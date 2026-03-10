@@ -58,6 +58,7 @@ Esempio per un layout a **3 colonne** con `gap: 32px`:
 .card {
   flex-basis: calc(100% / 3 - (32px * 2) / 3);
 }
+```
 
 ## Competenze allenate
 
