@@ -69,6 +69,7 @@ a {
   background-color: #fff;
   position: relative;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 /* Pallino */
@@ -86,7 +87,8 @@ a {
 /* Switch attivo */
 .switch.active {
   background-color: #000;
-  border-color: #000;
+  border-color: black;
+  box-shadow: #000 0px 1px 2px;
 }
 
 .switch.active::after {
@@ -98,7 +100,8 @@ a {
 /* Switch inattivo */
 .switch.inactive {
   background-color: #fff;
-  border-color: #a6a6a6;
+  border-color: whitesmoke;
+  box-shadow: #000 0px 1px 2px;
 }
 
 .switch.inactive::after {
