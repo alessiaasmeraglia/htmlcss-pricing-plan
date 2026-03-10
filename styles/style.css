@@ -1,21 +1,25 @@
+/* Reset base per tutti gli elementi */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Stile generale della pagina */
 body {
   font-family: sans-serif;
-  background-color: #f3f3f3;
+  background-color: #ffffff;
   color: #111;
   overflow-x: hidden;
 }
 
+/* Link senza sottolineatura e con colore ereditato */
 a {
   color: inherit;
   text-decoration: none;
 }
 
+/* Contenitore principale */
 .pricing {
   max-width: 1180px;
   margin: 0 auto;
@@ -30,6 +34,7 @@ a {
   margin-bottom: 38px;
 }
 
+/* Titolo principale */
 .title-box h1 {
   font-size: 45px;
   line-height: 0.95;
@@ -37,6 +42,7 @@ a {
   margin-bottom: 10px;
 }
 
+/* Testo descrittivo */
 .title-box p {
   max-width: 760px;
   font-size: 1rem;
@@ -44,6 +50,7 @@ a {
   line-height: 1.2;
 }
 
+/* Sezione billing */
 .billing {
   display: flex;
   align-items: center;
@@ -53,6 +60,7 @@ a {
   font-size: 1rem;
 }
 
+/* Interruttore grafico */
 .switch {
   width: 34px;
   height: 22px;
@@ -62,6 +70,7 @@ a {
   flex-shrink: 0;
 }
 
+/* Pallino interno dello switch */
 .switch::after {
   content: "";
   width: 14px;
@@ -73,6 +82,7 @@ a {
   background-color: transparent;
 }
 
+/* Stato attivo dello switch */
 .switch.active {
   border-color: #111;
 }
@@ -83,24 +93,36 @@ a {
   background-color: #111;
 }
 
-/* GRID */
+/* CARD LAYOUT CON FLEXBOX */
 .cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: stretch;
 }
 
-/* CARD */
+/*
+  Formula per 3 colonne con gap:
+  flex-basis: calc(100% / 3 - (32px * 2) / 3);
+
+  Spiegazione:
+  - 100% / 3 = larghezza teorica di 3 colonne
+  - (32px * 2) = i 2 gap presenti tra 3 colonne
+  - / 3 = distribuzione del gap su ogni card
+*/
 .card {
-  width: 100%;
-  min-width: 0;
-  height: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: calc(100% / 3 - (32px * 2) / 3);
+  min-width: 280px;
+
   background-color: #fff;
   border-radius: 28px;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
   padding: 42px 32px 38px;
 }
 
+/* Titolo card */
 .card h2 {
   font-size: 32px;
   line-height: 1;
@@ -109,21 +131,23 @@ a {
   overflow-wrap: break-word;
 }
 
+/* Sottotitolo card */
 .subtitle {
   font-size: 0.95rem;
   color: #8a8a8a;
   margin-bottom: 34px;
 }
 
+/* Box del prezzo */
 .price-box {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   gap: 6px;
   margin-bottom: 28px;
-  
 }
 
+/* Simbolo valuta */
 .currency {
   font-size: 1.2rem;
   font-weight: 700;
@@ -131,18 +155,21 @@ a {
   margin-bottom: 10px;
 }
 
+/* Prezzo numerico */
 .price {
-  font-size: 32px;
+  font-size: 35px;
   line-height: 0.9;
   font-weight: 800;
 }
 
+/* Periodo del prezzo */
 .period {
   font-size: 1rem;
   color: #777;
   margin-bottom: 10px;
 }
 
+/* Riga sconto */
 .discount-row {
   display: flex;
   justify-content: center;
@@ -152,16 +179,17 @@ a {
   font-size: 1rem;
 }
 
+/* Badge sconto */
 .badge {
   background-color: #e5e5e5;
   padding: 8px 12px;
   border-radius: 10px;
 }
 
+/* Bottone principale */
 .btn {
   display: block;
   width: 100%;
-  box-sizing: border-box;
   text-align: center;
   padding: 18px 16px;
   border-radius: 18px;
@@ -172,21 +200,24 @@ a {
   margin-bottom: 32px;
 }
 
-/* CARD VIOLA */
+/* Card evidenziata */
 .featured {
   background: linear-gradient(180deg, #5f00ff 0%, #7d00ff 100%);
   color: #fff;
 }
 
+/* Testi secondari nella card evidenziata */
 .featured .subtitle,
 .featured .period {
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* Badge nella card evidenziata */
 .featured .badge {
   color: #111;
 }
 
+/* Bottone chiaro */
 .btn-light {
   background: #fff;
   color: #5b00ff;
@@ -199,6 +230,7 @@ a {
   margin: 0 auto;
 }
 
+/* Riga singola feature */
 .features li {
   display: grid;
   grid-template-columns: 28px 1fr;
@@ -209,6 +241,7 @@ a {
   line-height: 1.2;
 }
 
+/* Simbolo di default */
 .features li::before {
   content: "✓";
   font-size: 1.9rem;
@@ -216,11 +249,16 @@ a {
   text-align: center;
 }
 
+/* Simbolo per elementi non inclusi */
 .features li.not-included::before {
   content: "✕";
 }
 
-/* TABLET */
+/* ADATTAMENTI LEGGERI
+   Nessuna media query per colonne:
+   il wrap avviene automaticamente grazie a min-width */
+
+/* Header più ordinato su schermi ampi */
 @media screen and (min-width: 768px) {
   .pricing {
     padding: 34px 30px 56px;
@@ -231,63 +269,16 @@ a {
     justify-content: space-between;
     align-items: flex-start;
   }
-
-  .cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px;
-  }
-
-  .wide-tablet {
-    grid-column: 1 / -1;
-  }
-
-  .wide-tablet .features {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(260px, 1fr));
-    column-gap: 70px;
-    row-gap: 6px;
-    width: 100%;
-    max-width: none;
-    margin: 8px 0 0;
-  }
-
-  .wide-tablet .features li {
-    margin-bottom: 18px;
-  }
 }
 
-/* DESKTOP */
-@media screen and (min-width: 1200px) {
-  .pricing {
-    max-width: 1180px;
-    padding: 30px 24px 48px;
-  }
-
-  .cards {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 32px;
-    align-items: stretch;
-  }
-
-  .wide-tablet {
-    grid-column: auto;
-  }
-
-  .wide-tablet .features {
-    display: block;
-    width: 100%;
-    margin: 0;
-  }
-
-  .wide-tablet .features li {
-    margin-bottom: 22px;
-  }
-}
-
-/* MOBILE */
+/* Rifiniture mobile */
 @media screen and (max-width: 480px) {
   .pricing {
-    padding: 24px 24px 40px;
+    padding: 24px 20px 40px;
+  }
+
+  .title-box h1 {
+    font-size: 36px;
   }
 
   .title-box p {
@@ -300,15 +291,16 @@ a {
   }
 
   .card {
-    padding: 34px 28px;
+    padding: 34px 24px;
+    min-width: 100%;
   }
 
   .card h2 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .price {
-    font-size: 4rem;
+    font-size: 3.2rem;
   }
 
   .features li {
