@@ -48,6 +48,17 @@ Per la disposizione delle card è stato utilizzato **Flexbox** con:
 
 In questo modo il layout si adatta in maniera fluida allo spazio disponibile, permettendo alle card di andare automaticamente a capo senza dover dipendere solo dalle media query classiche.
 
+## Formula utilizzata per le colonne
+
+Per gestire l’incolonnamento delle card è stata usata una formula con `calc()` applicata a `flex-basis`.
+
+Esempio per un layout a **3 colonne** con `gap: 32px`:
+
+```css
+.card {
+  flex-basis: calc(100% / 3 - (32px * 2) / 3);
+}
+
 ## Competenze allenate
 
 Con questo esercizio ho lavorato su:
